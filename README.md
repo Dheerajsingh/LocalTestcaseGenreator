@@ -13,9 +13,9 @@ Double-click the **`run.bat`** file to launch the application.
 ## 🛠️ Architecture
 ```mermaid
 graph TD
-    User([User]) -->|Inputs Feature| UI[Streamlit UI (app.py)]
-    UI -->|Calls| Tool[Python Tool (generate_testcases.py)]
-    Tool -->|Prompts| Ollama[Ollama LLM (llama3.2)]
+    User([User]) -->|Inputs Feature| UI["Streamlit UI (app.py)"]
+    UI -->|Calls| Tool["Python Tool (generate_testcases.py)"]
+    Tool -->|Prompts| Ollama["Ollama LLM (llama3.2)"]
     Ollama -->|JSON Response| Tool
     Tool -->|Structured Data| UI
     UI -->|Renders| Cards[Test Case Cards]
